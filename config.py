@@ -13,3 +13,9 @@ class Config(object):
 
     # Get this api from https://www.remove.bg/b/background-removal-api
     RemoveBG_API = os.environ.get("RemoveBG_API", "")
+
+    # Update channel for Force Subscribe
+    UPDATE_CHANNEL = os.environ.get("UPDATE_CHANNEL", "")
+
+    PROCESS_MAX_TIMEOUT = int(os.environ.get("TIME_LIMIT"))
+    
