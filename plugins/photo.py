@@ -2,7 +2,8 @@
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from pyrogram import Client, filters
 from pyrogram.errors import UserNotParticipant, UserBannedInChannel
-
+from config import Config
+from script import script  # pylint:disable=import-error
 
 @Client.on_message(filters.photo & filters.private)
 async def photo(client: Client, message: Message):
