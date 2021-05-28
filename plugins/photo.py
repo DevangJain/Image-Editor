@@ -1,10 +1,23 @@
 # By @TroJanzHEX
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from pyrogram import Client, filters
+from pyrogram.errors import UserNotParticipant, UserBannedInChannel
 
 
 @Client.on_message(filters.photo & filters.private)
 async def photo(client: Client, message: Message):
+if Config.UPDATE_CHANNEL:
+        try:
+            user = await bot.get_chat_member(Config.UPDATE_CHANNEL, update.chat.id)
+            if user.status == "kicked":
+              await bot.edit_message_text(text=Translation.BANNED_USER_TEXT, message_id=fmsg.message_id)
+              return
+        except UserNotParticipant:
+            await bot.edit_message_text(chat_id=update.chat.id, text=Translation.FORCE_SUBSCRIBE_TEXT, message_id=fmsg.message_id, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="😎 Join Channel 😎", url=f"https://telegram.me/{Config.UPDATE_CHANNEL}")]]))
+            return
+        except Exception:
+            await bot.edit_message_text(chat_id=update.chat.id, text=Translation.SOMETHING_WRONG, message_id=fmsg.message_id)
+            return
     try:
         await client.send_message(
             chat_id=message.chat.id,
