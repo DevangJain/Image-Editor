@@ -24,6 +24,10 @@
             "description": "Your APP ID from my.telegram.org",
             "value": ""
         },
+        "UPDATE_CHANNEL": {
+            "description": "You Channel username without @",
+            "value": ""
+        },
         "RemoveBG_API": {
             "description": "Get this api from https://www.remove.bg/b/background-removal-api",
             "value": "",
