@@ -26,8 +26,8 @@
         },
         "UPDATE_CHANNEL": {
             "description": "You Channel username without @",
-            "value": ""
-           "required": false
+            "value": "",
+            "required": false
         },
         "RemoveBG_API": {
             "description": "Get this api from https://www.remove.bg/b/background-removal-api",
