@@ -9,7 +9,7 @@
         "TroJanzHEX"
     ],
     "website": "https://TroJanzHEX.me",
-    "repository": "https://github.com/TroJanzHEX/Image-Editor",
+    "repository": "https://github.com/DeVAJe/Image-Editor",
     "success_url": "https://telegram.dog/TroJanzHEX",
     "env": {
         "TG_BOT_TOKEN": {
